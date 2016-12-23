@@ -1,0 +1,18 @@
+Steps:
+1.Add "UI Testing Bundle" or "Unit Testing Bundle" (if it not exist)
+	Xcode -> File -> New -> Target -> iOS -> iOS UI Testing Bundle(or iOS Unit Testing Bundle)
+	-> Next -> Make Setting about project ect.
+2.Make setting for UITesting(UnitTesting) Scheme, for example:
+ 	* Code Sigining, 
+	* Build Setting(like iOS Deployment Target, Product Bundle Identifier etc.) 
+3.Write Test Cases 
+4.run test cases with "COMMAND + U"
+
+Code Signing Key Points:
+	* Project: ensure Provisioning Profile, Development Team, Code Signing Identity are OK.
+	* UITest/Test: 	set "Signing" as "Automatically manage signing";
+			set "Development Team" the same as Project;
+			set "Code Signing Identity" as "iOS Developer".
+
+
+

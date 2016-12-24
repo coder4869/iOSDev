@@ -1,4 +1,4 @@
-Steps:
+## Steps:
 1.Add "UI Testing Bundle" or "Unit Testing Bundle" (if it not exist)
 	Xcode -> File -> New -> Target -> iOS -> iOS UI Testing Bundle(or iOS Unit Testing Bundle)
 	-> Next -> Make Setting about project ect.
@@ -8,11 +8,49 @@ Steps:
 3.Write Test Cases 
 4.run test cases with "COMMAND + U"
 
-Code Signing Key Points:
-	* Project: ensure Provisioning Profile, Development Team, Code Signing Identity are OK.
-	* UITest/Test: 	set "Signing" as "Automatically manage signing";
-			set "Development Team" the same as Project;
-			set "Code Signing Identity" as "iOS Developer".
+
+## Code Signing Key Points:
+	* Project: 
+		ensure Provisioning Profile, Development Team, Code Signing Identity are OK.
+	* UITest/Test: 	
+		set "Signing" as "Automatically manage signing";
+		set "Development Team" the same as Project;
+		set "Code Signing Identity" as "iOS Developer".
+
+
+## UITesting Elements
+<1> XCUIApplication
+	* maintenance life-cycle of application
+	* parent class: XCUIElement
+	* main methods:
+		launch(): start app; 
+		terminate(): stop app.
+<2> XCUIElement
+	* can represent all system UI elements
+	* parent class: NSObject
+	* implemented delegates: XCUIElementAttributes, XCUIElementTypeQueryProvider
+	* variables:
+		exist: BOOL, describing if one element exist or not
+	* main methods:
+		[1].
+		<descendantsMatchingType:> get collection of element and its children classes of target XCUIElementType
+		<childrenMatchingType:> get collection of element with target XCUIElementType except children classes
+		difference: result including children classes or not
+<3> XCUIElement (XCUIElementTouchEvents)
+	* provides UI-interaction methods
+	* main methods:
+		tap(): send tap action; 
+		doubleTap(): send double tap action;
+		twoFingerTap(): send two finger tap action;
+		pressForDuration(): send long press action (press time self define);
+		tapWithNumberOfTaps: numberOfTouches: send more than one taps and touch points (eg. 2 taps and 2 touches);
+		pressForDuration: thenDragToElement: pressing for some time and then drag to another element
+		swipeUp(): swipe from down to up;
+		swipeDown(): swipe from up to dowm;
+		swipeLeft(): swipe from right to left;
+		swipeRight(): swipe from left to right;
+
+
 
 
 

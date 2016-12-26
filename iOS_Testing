@@ -31,10 +31,11 @@
 	* implemented delegates: XCUIElementAttributes, XCUIElementTypeQueryProvider
 	* variables:
 		exist: BOOL, describing if one element exist or not
+		hittable: BOOL, describing if one element hittable or not
 	* main methods:
 		[1].
-		<descendantsMatchingType:> get collection of element and its children classes of target XCUIElementType
-		<childrenMatchingType:> get collection of element with target XCUIElementType except children classes
+		descendantsMatchingType: get collection of element and its children classes of target XCUIElementType
+		childrenMatchingType: get collection of element with target XCUIElementType except children classes
 		difference: result including children classes or not
 <3> XCUIElement (XCUIElementTouchEvents)
 	* provides UI-interaction methods
@@ -49,8 +50,16 @@
 		swipeDown(): swipe from up to dowm;
 		swipeLeft(): swipe from right to left;
 		swipeRight(): swipe from left to right;
-
-
-
-
+		pinchWithScale: velocity: Sends a pinching gesture with two touches (velocity is pinching speed).
+		rotate: withVelocity: Sends a rotation gesture with two touches (velocity is pinching speed).
+<4> XCUIElement (XCUIElementMouseEvents)
+    XCUIElement (XCUIElementTouchBarEvents)
+	* mouse methods for Mac OSX (for more information, please refer to API)
+<5> XCUIElement (XCUIElementTypePickerWheel)
+	* main methods:
+		adjustToPickerWheelValue: Changes the displayed value for the picker wheel. Will generate a test failure if the specified value is not available. 
+<6> XCUIElement (XCUIElementKeyboardEvents)
+	* for Mac OSX methods, please refer to API
+	* main methods(ios):
+		typeText: used for input text of TextField and TextView, keyboard focus is needed before using it
 

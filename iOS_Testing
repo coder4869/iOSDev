@@ -28,7 +28,7 @@
 <2> XCUIElement
 	* can represent all system UI elements
 	* parent class: NSObject
-	* implemented delegates: XCUIElementAttributes, XCUIElementTypeQueryProvider
+	* implemented protocol: XCUIElementAttributes, XCUIElementTypeQueryProvider
 	* variables:
 		exist: BOOL, describing if one element exist or not
 		hittable: BOOL, describing if one element hittable or not
@@ -62,4 +62,6 @@
 	* for Mac OSX methods, please refer to API
 	* main methods(ios):
 		typeText: used for input text of TextField and TextView, keyboard focus is needed before using it
-
+<7> XCUIElementAttributes
+	XCUIElementTypeQueryProvider
+	* for more information about the two protocols, please refer to API

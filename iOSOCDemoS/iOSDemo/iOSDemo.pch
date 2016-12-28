@@ -1,0 +1,18 @@
+//
+//  iOSDemo.pch
+//  iOSDemo
+//
+//  Created by coder4869 on 12/27/16.
+//  Copyright © 2016 coder4869. All rights reserved.
+//
+
+#ifndef iOSDemo_pch
+#define iOSDemo_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <OCBaseKit/OCBaseKit.h>
+
+
+#endif /* iOSDemo_pch */
